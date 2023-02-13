@@ -1,0 +1,71 @@
+#░█████╗░██╗░░░░░██╗███╗░░░███╗░█████╗░████████╗██████╗░
+#██╔══██╗██║░░░░░██║████╗░████║██╔══██╗╚══██╔══╝██╔══██╗
+#███████║██║░░░░░██║██╔████╔██║██║░░██║░░░██║░░░██║░░██║
+#██╔══██║██║░░░░░██║██║╚██╔╝██║██║░░██║░░░██║░░░██║░░██║
+#██║░░██║███████╗██║██║░╚═╝░██║╚█████╔╝░░░██║░░░██████╔╝
+#╚═╝░░╚═╝╚══════╝╚═╝╚═╝░░░░░╚═╝░╚════╝░░░░╚═╝░░░╚═════╝░
+#Versão: 1.0        Author: Computer_BR(Alisson)
+
+#Site para criar mensagens com gradiente: https://rgb.birdflop.com/
+
+#●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
+#† ❤ † MOTD † ❤ †
+#●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
+Motd: #Você pode usar todas essas Placeholders. {data_hora}, {nl}, {online} e {max_players} .Lembrando que {data_hora} irá pegar o horário da máquina que está o Servidor
+  ativarmotdestatico: false
+  motd_estatico:
+    - "&aServidor está aberto 1{nl}&aHoje é {data_hora}"
+    - "&aServidor está aberto 2{nl}&aHoje é {data_hora}"
+    - "&aServidor está aberto 3{nl}&aHoje é {data_hora}"
+  segunda-feira:
+    - "&aServidor está{nl}&aTotalmente aberto Segunda-Feira"
+    - "&aServidor está{nl}&aTotalmente aberto Segunda-Feira"
+  terca-feira:
+    - "&aServidor está{nl}&aTotalmente aberto Terça-Feira"
+    - "&aServidor está{nl}&aTotalmente aberto Terça-Feira"
+  quarta-feira:
+    - "&aServidor está{nl}&aTotalmente aberto Quarta-Feira"
+    - "&aServidor está{nl}&aTotalmente aberto Quarta-Feira"
+  quinta-feira:
+    - "&aServidor está{nl}&aTotalmente aberto Quinta-Feira"
+    - "&aServidor está{nl}&aTotalmente aberto Quinta-Feira"
+  sexta-feira:
+    - "&aServidor está{nl}&aTotalmente aberto Sexta-Feira"
+    - "&aServidor está{nl}&aTotalmente aberto Sexta-Feira"
+  sabado:
+    - "&aServidor está{nl}&aTotalmente aberto Sabado"
+    - "&aServidor está{nl}&aTotalmente aberto Sabado"
+  domingo:
+    - "&aServidor está{nl}&aTotalmente aberto Domingo"
+    - "&aServidor está{nl}&aTotalmente aberto Domingo"
+
+#●▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬●
+#† ❤ † MOTD MANUTENÇÂO † ❤ †
+#●▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬●
+Motd_Manutencao: #Você pode usar todas essas Placeholders. {data_hora}, {nl}, {online} e {max_players}
+  ativarmotdestatico: false
+  motd_estatico:
+    - "&cServidor está em manutenção 1{nl}&cHoje é {data_hora}"
+    - "&cServidor está em manutenção 2{nl}&cHoje é {data_hora}"
+    - "&cServidor está em manutenção 3{nl}&cHoje é {data_hora}"
+  segunda-feira:
+    - "&cServidor está em{nl}&cManutenção, hoje é Segunda-Feira"
+    - "&cServidor está em{nl}&cManutenção, hoje é Segunda-Feira"
+  terca-feira:
+    - "&cServidor está em{nl}&cManutenção, hoje é Terça-Feira"
+    - "&cServidor está em{nl}&cManutenção, hoje é Terça-Feira"
+  quarta-feira:
+    - "&cServidor está em{nl}&cManutenção, hoje é Quarta-Feira"
+    - "&cServidor está em{nl}&cManutenção, hoje é Quarta-Feira"
+  quinta-feira:
+    - "&cServidor está em{nl}&cManutenção, hoje é Quinta-Feira"
+    - "&cServidor está em{nl}&cManutenção, hoje é Quinta-Feira"
+  sexta-feira:
+    - "&cServidor está em{nl}&cManutenção, hoje é Sexta-Feira"
+    - "&cServidor está em{nl}&cManutenção, hoje é Sexta-Feira"
+  sabado:
+    - "&cServidor está em{nl}&cManutenção, hoje é Sabado"
+    - "&cServidor está em{nl}&cManutenção, hoje é Sabado"
+  domingo:
+    - "&cServidor está em{nl}&cManutenção, hoje é Domingo"
+    - "&cServidor está em{nl}&cManutenção, hoje é Domingo"
