@@ -1,5 +1,5 @@
 name: AliMOTD
-version: '1.5.0'
+version: '1.6.0'
 main: br.computer.alimotd.Alimotd
 api-version: 1.16
 softdepend: [ ProtocolLib ]

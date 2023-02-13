@@ -2,6 +2,7 @@ package br.computer.alimotd;
 
 
 import br.computer.alimotd.commands.MaintenanceCommand;
+import br.computer.alimotd.events.PlayerJoin;
 import br.computer.alimotd.events.PlayerLogin;
 import br.computer.alimotd.motd.Motd;
 import br.computer.alimotd.tabcomplete.Alimotdtabcomplete;
@@ -13,17 +14,17 @@ import com.comphenix.protocol.events.ListenerPriority;
 import com.comphenix.protocol.events.PacketAdapter;
 import com.comphenix.protocol.events.PacketEvent;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.CommandExecutor;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
 import java.util.*;
 
-public final class Alimotd extends JavaPlugin {
+import static br.computer.alimotd.events.PlayerJoin.newVersion;
+
+public final class Alimotd extends JavaPlugin implements Listener {
 
     private static Alimotd plugin;
     public static Alimotd instance;
@@ -53,7 +54,7 @@ public final class Alimotd extends JavaPlugin {
         plugin = this;
         registrarcomandos();
         SendMenssage("§bPlugin iniciado com sucesso!");
-        SendMenssage("§bVesão 1.5.0");
+        SendMenssage("§bVesão 1.6.0");
         SendMenssage("§bAuthor: Computer_BR (Alisson)");
         new UpdateChecker(this, 107981).getVersion(version -> {
             if (this.getDescription().getVersion().equals(version)) {
@@ -62,6 +63,7 @@ public final class Alimotd extends JavaPlugin {
             } else {
                 SendMenssage("§aHá uma nova atualização disponível.");
                 SendMenssage("§6Há uma nova versão do AliMotd disponível: " + version + " Faça o download da nova versão em: https://www.spigotmc.org/resources/alimotd-1-8-1-19.107981/");
+                getServer().getPluginManager().registerEvents(new PlayerJoin(newVersion), this);
             }
         });
     }
