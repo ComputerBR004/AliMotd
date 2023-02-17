@@ -4,7 +4,7 @@ main: br.computer.alimotd.Alimotd
 api-version: 1.16
 softdepend: [ ProtocolLib ]
 authors: [ Computer_BR ]
-description: Meu primeio plugin, totalmente configuravel.
+description: AliMotd, plugin de Motd com Sistema de manutenção
 commands:
   manutencao:
     aliases:

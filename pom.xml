@@ -2,10 +2,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.computer</groupId>
     <artifactId>AliMOTD</artifactId>
-    <version>1.6.0</version>
+    <version>1.8.0</version>
     <packaging>jar</packaging>
     <name>AliMOTD</name>
-    <description>Plugin de motd feito para as novas versões do minecraft</description>
+    <description>AliMotd, plugin de Motd com Sistema de manutenção</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

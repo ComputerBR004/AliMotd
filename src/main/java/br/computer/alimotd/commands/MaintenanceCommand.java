@@ -23,7 +23,7 @@ public class MaintenanceCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender s, Command cmd, String label, String[] args) {
         if (!s.hasPermission(Objects.requireNonNull(Alimotd.config.getConfig().getString("Permissoes.alimotd")))) {
-            s.sendMessage(Objects.requireNonNull(Messege.getmsg2("SemPerm")));
+            s.sendMessage((Messege.getmsg2("SemPerm")));
             return false;
         }
         if (args.length > 0) {
@@ -84,9 +84,9 @@ public class MaintenanceCommand implements CommandExecutor {
                                 if (countDownTime == 0) {
                                     if (!Bukkit.hasWhitelist()) {
                                         for (Player pp : Bukkit.getOnlinePlayers()) {
-                                            if (getWhitelistedPlayers().contains(pp) || pp.hasPermission(Objects.requireNonNull(Alimotd.config.getConfig().getString("Permissoes.perme_continuarnoservidor"))) || pp.isOp()) {
+                                            if (getWhitelistedPlayers().contains(pp) || pp.hasPermission((Objects.requireNonNull(Alimotd.config.getConfig().getString("Permissoes.perme_continuarnoservidor")))) || pp.isOp()) {
                                                 pp.sendMessage("");
-                                                pp.sendMessage(Objects.requireNonNull(Messege.getmsg2("Manutencao_Aviso_Ativado")));
+                                                pp.sendMessage((Messege.getmsg2("Manutencao_Aviso_Ativado")));
                                                 pp.sendMessage("");
                                             } else {
                                                 if (Alimotd.config.getConfig().getBoolean("Whitelist.kickplayerativar")) {
@@ -97,36 +97,36 @@ public class MaintenanceCommand implements CommandExecutor {
                                             }
                                         }
                                         Bukkit.setWhitelist(true);
-                                        s.sendMessage(Objects.requireNonNull(Messege.getmsg2("Manutencao_Ativada")));
+                                        s.sendMessage((Messege.getmsg2("Manutencao_Ativada")));
                                     } else {
-                                        s.sendMessage(Objects.requireNonNull(Messege.getmsg2("Manutencao_Ja_Ativada")));
+                                        s.sendMessage((Messege.getmsg2("Manutencao_Ja_Ativada")));
                                     }
                                 }
                                 countDownTime--;
                             }
                         }, 0, 20);
-                        s.sendMessage(Objects.requireNonNull(Messege.getmsg2("Manutencao_Contagem")));
+                        s.sendMessage((Messege.getmsg2("Manutencao_Contagem")));
                         return true;
                     } catch (NumberFormatException e) {
-                        s.sendMessage(Objects.requireNonNull(Messege.getmsg2("Manutencao_Erro_Numero")));
+                        s.sendMessage((Messege.getmsg2("Manutencao_Erro_Numero")));
                         return false;
                     }
                 } else {
-                    s.sendMessage(Objects.requireNonNull(Messege.getmsg2("Manutencao_Tempo")));
+                    s.sendMessage((Messege.getmsg2("Manutencao_Tempo")));
                     return false;
                 }
             }
             if (args[0].equalsIgnoreCase("desativar")) {
                 if (Bukkit.hasWhitelist()) {
                     Bukkit.setWhitelist(false);
-                    s.sendMessage(Objects.requireNonNull(Messege.getmsg2("Manutencao_Desativada")));
+                    s.sendMessage((Messege.getmsg2("Manutencao_Desativada")));
                 } else {
-                    s.sendMessage(Objects.requireNonNull(Messege.getmsg2("Manutencao_Ja_Desativada")));
+                    s.sendMessage((Messege.getmsg2("Manutencao_Ja_Desativada")));
                 }
             }
             if (args[0].equalsIgnoreCase("add")) {
                 if (args.length < 2) {
-                    s.sendMessage(Objects.requireNonNull(Messege.getmsg2("Manutencao_add")));
+                    s.sendMessage((Messege.getmsg2("Manutencao_add")));
                     return true;
                 }
                 OfflinePlayer target = Bukkit.getServer().getOfflinePlayer(args[1]);
@@ -143,7 +143,7 @@ public class MaintenanceCommand implements CommandExecutor {
             }
             if (args[0].equalsIgnoreCase("remover")) {
                 if (args.length < 2) {
-                    s.sendMessage(Objects.requireNonNull(Messege.getmsg2("Manutencao_remover")));
+                    s.sendMessage((Messege.getmsg2("Manutencao_remover")));
                     return true;
                 }
                 OfflinePlayer target = Bukkit.getServer().getOfflinePlayer(args[1]);
@@ -156,7 +156,7 @@ public class MaintenanceCommand implements CommandExecutor {
                     }
                     if (Bukkit.hasWhitelist() && Alimotd.config.getConfig().getBoolean("Whitelist.removerplayerkick")) {
                         if (target.isOnline() && target.isWhitelisted()) {
-                            Objects.requireNonNull(target.getPlayer()).kickPlayer(Objects.requireNonNull(Messege.getmsg("Foi_Expulso_Remover")));
+                            Objects.requireNonNull(target.getPlayer()).kickPlayer((Messege.getmsg("Foi_Expulso_Remover")));
                         }
                     }
                     target.setWhitelisted(false);
@@ -182,7 +182,7 @@ public class MaintenanceCommand implements CommandExecutor {
                 s.sendMessage("§6[ALIMOTD] §7Configurações recarregada com sucesso!");
             }
         }
-        if (args.length <= 0) {
+        if (args.length == 0) {
             for (String texto : Alimotd.mensagens.getConfig().getStringList("Manutencao_Comando_incorreto")) {
                 s.sendMessage(texto.replace("&", "§").replace("{command}", label));
             }

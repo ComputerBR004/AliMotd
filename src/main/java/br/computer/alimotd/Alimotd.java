@@ -20,6 +20,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
+import java.io.File;
 import java.util.*;
 
 import static br.computer.alimotd.events.PlayerJoin.newVersion;
@@ -54,7 +55,7 @@ public final class Alimotd extends JavaPlugin implements Listener {
         plugin = this;
         registrarcomandos();
         SendMenssage("§bPlugin iniciado com sucesso!");
-        SendMenssage("§bVesão 1.6.0");
+        SendMenssage("§bVesão 1.8.0");
         SendMenssage("§bAuthor: Computer_BR (Alisson)");
         new UpdateChecker(this, 107981).getVersion(version -> {
             if (this.getDescription().getVersion().equals(version)) {
@@ -93,6 +94,11 @@ public final class Alimotd extends JavaPlugin implements Listener {
         config.saveDefaultConfig();
         mensagens.saveDefaultConfig();
         motd.saveDefaultConfig();
+
+        File folder = new File(getDataFolder(), "Server-Icon");
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
     }
 
     private void SendMenssage(String msg) {

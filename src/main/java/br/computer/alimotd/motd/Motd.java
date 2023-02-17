@@ -5,6 +5,12 @@ import com.comphenix.protocol.wrappers.WrappedGameProfile;
 import com.comphenix.protocol.wrappers.WrappedServerPing;
 import org.bukkit.Bukkit;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.util.*;
 
 
@@ -30,6 +36,32 @@ public class Motd {
         }
         Random gerador = new Random();
         if (Bukkit.hasWhitelist()) {
+            String serverIconUrl = Alimotd.motd.getConfig().getString("Motd_Manutencao.server-icon-url");
+            if (serverIconUrl != null && !serverIconUrl.isEmpty()) {
+                try {
+                    URL url = new URL(serverIconUrl);
+                    BufferedImage image = ImageIO.read(url);
+                    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                    ImageIO.write(image, "png", byteArrayOutputStream);
+                    byte[] data = byteArrayOutputStream.toByteArray();
+                    ping.setFavicon(WrappedServerPing.CompressedImage.fromPng(data));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                File serverIcon = new File("plugins/AliMOTD/Server-Icon", Objects.requireNonNull(Alimotd.motd.getConfig().getString("Motd_Manutencao.server-icon-name")));
+                if (serverIcon.exists()) {
+                    try {
+                        BufferedImage image = ImageIO.read(serverIcon);
+                        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                        ImageIO.write(image, "png", byteArrayOutputStream);
+                        byte[] data = byteArrayOutputStream.toByteArray();
+                        ping.setFavicon(WrappedServerPing.CompressedImage.fromPng(data));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
             if (Alimotd.config.getConfig().getBoolean("FakeMaximoJogadoresManutencao.ativar")) {
                 ping.setPlayersMaximum(Alimotd.config.getConfig().getInt("FakeMaximoJogadoresManutencao.quantidade"));
             }
@@ -77,6 +109,32 @@ public class Motd {
                 ping.setPlayersVisible(true);
             }
         } else {
+            String serverIconUrl = Alimotd.motd.getConfig().getString("Motd.server-icon-url");
+            if (serverIconUrl != null && !serverIconUrl.isEmpty()) {
+                try {
+                    URL url = new URL(serverIconUrl);
+                    BufferedImage image = ImageIO.read(url);
+                    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                    ImageIO.write(image, "png", byteArrayOutputStream);
+                    byte[] data = byteArrayOutputStream.toByteArray();
+                    ping.setFavicon(WrappedServerPing.CompressedImage.fromPng(data));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                File serverIcon = new File("plugins/AliMOTD/Server-Icon", Objects.requireNonNull(Alimotd.motd.getConfig().getString("Motd.server-icon-name")));
+                if (serverIcon.exists()) {
+                    try {
+                        BufferedImage image = ImageIO.read(serverIcon);
+                        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                        ImageIO.write(image, "png", byteArrayOutputStream);
+                        byte[] data = byteArrayOutputStream.toByteArray();
+                        ping.setFavicon(WrappedServerPing.CompressedImage.fromPng(data));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
             if (Alimotd.config.getConfig().getBoolean("FakeMaximoJogadores.ativar")) {
                 ping.setPlayersMaximum(Alimotd.config.getConfig().getInt("FakeMaximoJogadores.quantidade"));
             }
