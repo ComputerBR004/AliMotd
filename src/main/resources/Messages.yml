@@ -1,0 +1,52 @@
+#░█████╗░██╗░░░░░██╗███╗░░░███╗░█████╗░████████╗██████╗░
+#██╔══██╗██║░░░░░██║████╗░████║██╔══██╗╚══██╔══╝██╔══██╗
+#███████║██║░░░░░██║██╔████╔██║██║░░██║░░░██║░░░██║░░██║
+#██╔══██║██║░░░░░██║██║╚██╔╝██║██║░░██║░░░██║░░░██║░░██║
+#██║░░██║███████╗██║██║░╚═╝░██║╚█████╔╝░░░██║░░░██████╔╝
+#╚═╝░░╚═╝╚══════╝╚═╝╚═╝░░░░░╚═╝░╚════╝░░░░╚═╝░░░╚═════╝░
+
+#●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬●
+#† ❤ † MESSAGES † ❤ †
+#●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬●
+Versao_Errada: "&41.8.x - 1.19.3" #Incompatibility message that will be displayed when the player is using a version not supported by the server.
+Manutencao_Erro_Ao_Entrar: "&cServer is undergoing maintenance{nl}&cWe¨ll be back shortly" #Maintenance message that will be displayed when attempting to log into the server during a maintenance period.
+Manutencao_Ativada: "&aMaintenance activated successfully!"
+Manutencao_Ja_Ativada: "&cMaintenance has already been activated!"
+Manutencao_Aviso_Ativado: "&aAs you are on the maintenance list, either as an operator or with permission, you were not kicked!"
+Manutencao_Kick_Ativado: "&4You were kicked because you were not on the maintenance list{nl}&4Please come back later"
+Manutencao_Desativada: "&aMaintenance successfully deactivated!"
+Manutencao_Ja_Desativada: "&cMaintenance has already been deactivated!"
+Manutencao_Tempo: "&cPlease input the time for the server maintenance to occur in seconds or minutes (Example: 30s or 2m)"
+Manutencao_Erro_Numero: "&cPlease input a valid number."
+Manutencao_Contagem: "&aCountdown started successfully!"
+Nao_Pode_Remover: "&cYou cannot remove §b{player} §cfrom the maintenance list."
+Ja_Foi_Removido: "&b{player}&c has already been removed from the maintenance list."
+Foi_Expulso_Remover: "&cYou were kicked because you were removed from the maintenance list{nl}&cPlease come back later."
+Remivido_Da_lista: "&b{player}&a has been removed from the maintenance list."
+Ja_Esta_Adicionado: "&b{player}&c is already added to the maintenance list."
+Adicionado_Na_Lista: "&b{player}&a has been added to the maintenance list."
+Lista_De_Manutencao: "&aMaintenance list: &b"
+SemPerm: "&cYou do not have permission to execute this command."
+Manutencao_remover: "&cUse /maintenance remove <nickname>"
+Manutencao_add: "&cUse /maintenance add <nickname>"
+Manutencao_1_Segundos: "&cThe server will undergo maintenance in 1 second!" #Use {nl} to change lines.
+Manutencao_2_Segundos: "&cThe server will undergo maintenance in 2 seconds!" #Use {nl} to change lines.
+Manutencao_3_Segundos: "&cThe server will undergo maintenance in 3 seconds!" #Use {nl} to change lines.
+Manutencao_4_Segundos: "&cThe server will undergo maintenance in 4 seconds!" #Use {nl} to change lines.
+Manutencao_5_Segundos: "&cThe server will undergo maintenance in 5 seconds!" #Use {nl} to change lines.
+Manutencao_10_Segundos: "&cThe server will undergo maintenance in 10 seconds!" #Use {nl} to change lines.
+Manutencao_30_Segundos: "&cThe server will undergo maintenance in 30 seconds!" #Use {nl} to change lines.
+Manutencao_1_Minutos: "&cThe server will undergo maintenance in 1 minute!" #Use {nl} to change lines.
+Manutencao_2_Minutos: "&cThe server will undergo maintenance in 2 minutes!" #Use {nl} to change lines.
+Manutencao_5_Minutos: "&cThe server will undergo maintenance in 5 minutes!" #Use {nl} to change lines.
+Manutencao_7_Minutos: "&cThe server will undergo maintenance in 7 minutes!" #Use {nl} to change lines.
+Manutencao_10_Minutos: "&cThe server will undergo maintenance in 10 minutes!" #Use {nl} to change lines.
+Manutencao_15_Minutos: "&cThe server will undergo maintenance in 15 minutes!" #Use {nl} to change lines.
+Manutencao_Comando_incorreto:
+  - "&cIncorrect command, use:"
+  - "&c/{command} enable"
+  - "&c/{command} disable"
+  - "&c/{command} remove <nickname>"
+  - "&c/{command} add <nick>"
+  - "&c/{command} list"
+  - "&c/{command} reload"

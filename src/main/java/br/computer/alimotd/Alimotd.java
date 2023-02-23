@@ -26,12 +26,17 @@ import java.util.*;
 import static br.computer.alimotd.events.PlayerJoin.newVersion;
 
 public final class Alimotd extends JavaPlugin implements Listener {
-
     private static Alimotd plugin;
     public static Alimotd instance;
     public static Config config;
     public static Config mensagens;
     public static Config motd;
+    public static Config configpt;
+    public static Config mensagenspt;
+    public static Config motdpt;
+    public static Config configes;
+    public static Config mensagenses;
+    public static Config motdes;
 
     public static Alimotd getInstance() {
         return plugin;
@@ -54,16 +59,16 @@ public final class Alimotd extends JavaPlugin implements Listener {
         files();
         plugin = this;
         registrarcomandos();
-        SendMenssage("§bPlugin iniciado com sucesso!");
-        SendMenssage("§bVesão 1.8.0");
+        SendMenssage("§bPlugin launched successfully!");
+        SendMenssage("§bVersion 1.9.0");
         SendMenssage("§bAuthor: Computer_BR (Alisson)");
         new UpdateChecker(this, 107981).getVersion(version -> {
             if (this.getDescription().getVersion().equals(version)) {
-                SendMenssage("§aVocê está na ultima versão: " + version);
+                SendMenssage("§aYou are on the latest version: " + version);
 
             } else {
-                SendMenssage("§aHá uma nova atualização disponível.");
-                SendMenssage("§6Há uma nova versão do AliMotd disponível: " + version + " Faça o download da nova versão em: https://www.spigotmc.org/resources/alimotd-1-8-1-19.107981/");
+                SendMenssage("§aThere is a new update available.");
+                SendMenssage("§6There is a new version of AliMotd available: " + version + " Download the new version at: https://www.spigotmc.org/resources/alimotd-1-8-1-19.107981/");
                 getServer().getPluginManager().registerEvents(new PlayerJoin(newVersion), this);
             }
         });
@@ -71,7 +76,7 @@ public final class Alimotd extends JavaPlugin implements Listener {
 
     @Override
     public void onDisable() {
-        SendMenssage("§cPlugin desligado com sucesso!");
+        SendMenssage("§cPlugin shut down successfully!");
     }
 
     public Alimotd() {
@@ -89,13 +94,34 @@ public final class Alimotd extends JavaPlugin implements Listener {
 
     public void files() {
         config = new Config(this, "Config.yml");
-        mensagens = new Config(this, "Mensagens.yml");
+        mensagens = new Config(this, "Messages.yml");
         motd = new Config(this, "Motd.yml");
+
+        configpt = new Config(this, "Lang/PT-BR/Config.yml");
+        mensagenspt = new Config(this, "Lang/PT-BR/Messages.yml");
+        motdpt = new Config(this, "Lang/PT-BR/Motd.yml");
+
+        configes = new Config(this, "Lang/ES-SPANISH/Config.yml");
+        mensagenses = new Config(this, "Lang/ES-SPANISH/Messages.yml");
+        motdes = new Config(this, "Lang/ES-SPANISH/Motd.yml");
+
         config.saveDefaultConfig();
         mensagens.saveDefaultConfig();
         motd.saveDefaultConfig();
 
+        configpt.saveDefaultConfig();
+        mensagenspt.saveDefaultConfig();
+        motdpt.saveDefaultConfig();
+
+        configes.saveDefaultConfig();
+        mensagenses.saveDefaultConfig();
+        motdes.saveDefaultConfig();
+
         File folder = new File(getDataFolder(), "Server-Icon");
+        File folder2 = new File(getDataFolder(), "Lang");
+        if (!folder2.exists()) {
+            folder2.mkdirs();
+        }
         if (!folder.exists()) {
             folder.mkdirs();
         }

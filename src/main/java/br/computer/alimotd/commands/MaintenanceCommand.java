@@ -10,10 +10,13 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import br.computer.alimotd.config.Messege;
 
+
+
 import java.util.Objects;
 import java.util.stream.Collectors;
 
 import static org.bukkit.Bukkit.*;
+
 
 
 public class MaintenanceCommand implements CommandExecutor {
@@ -22,12 +25,12 @@ public class MaintenanceCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender s, Command cmd, String label, String[] args) {
-        if (!s.hasPermission(Objects.requireNonNull(Alimotd.config.getConfig().getString("Permissoes.alimotd")))) {
+        if (!s.hasPermission((Alimotd.config.getConfig().getString("Permissoes.alimotd")))) {
             s.sendMessage((Messege.getmsg2("SemPerm")));
             return false;
         }
         if (args.length > 0) {
-            if (args[0].equalsIgnoreCase("ativar")) {
+            if (args[0].equalsIgnoreCase("ativar") || args[0].equalsIgnoreCase("enable")) {
                 if (args.length > 1) {
                     try {
                         int time = 0;
@@ -96,7 +99,12 @@ public class MaintenanceCommand implements CommandExecutor {
                                                 }
                                             }
                                         }
-                                        Bukkit.setWhitelist(true);
+                                        Bukkit.getScheduler().runTask(Alimotd.getInstance(), new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                Bukkit.setWhitelist(true);
+                                            }
+                                        });
                                         s.sendMessage((Messege.getmsg2("Manutencao_Ativada")));
                                     } else {
                                         s.sendMessage((Messege.getmsg2("Manutencao_Ja_Ativada")));
@@ -116,7 +124,7 @@ public class MaintenanceCommand implements CommandExecutor {
                     return false;
                 }
             }
-            if (args[0].equalsIgnoreCase("desativar")) {
+            if (args[0].equalsIgnoreCase("desativar")|| args[0].equalsIgnoreCase("disable")) {
                 if (Bukkit.hasWhitelist()) {
                     Bukkit.setWhitelist(false);
                     s.sendMessage((Messege.getmsg2("Manutencao_Desativada")));
@@ -141,7 +149,7 @@ public class MaintenanceCommand implements CommandExecutor {
                             .replace("{player}", Objects.requireNonNull(target.getName())));
                 }
             }
-            if (args[0].equalsIgnoreCase("remover")) {
+            if (args[0].equalsIgnoreCase("remover")|| args[0].equalsIgnoreCase("remove")) {
                 if (args.length < 2) {
                     s.sendMessage((Messege.getmsg2("Manutencao_remover")));
                     return true;
@@ -170,7 +178,7 @@ public class MaintenanceCommand implements CommandExecutor {
                     return false;
                 }
             }
-            if (args[0].equalsIgnoreCase("lista")) {
+            if (args[0].equalsIgnoreCase("lista")|| args[0].equalsIgnoreCase("list")) {
                 s.sendMessage(Objects.requireNonNull(Alimotd.mensagens.getConfig().getString("Lista_De_Manutencao")).replace("&", "§") +
                         StringUtils.join(getWhitelistedPlayers().stream().map(OfflinePlayer::getName).collect(Collectors.toList()), ", "));
                 return false;
@@ -179,7 +187,7 @@ public class MaintenanceCommand implements CommandExecutor {
                 Alimotd.config.reloadConfig();
                 Alimotd.mensagens.reloadConfig();
                 Alimotd.motd.reloadConfig();
-                s.sendMessage("§6[ALIMOTD] §7Configurações recarregada com sucesso!");
+                s.sendMessage("§6[ALIMOTD] §7Settings reloaded successfully!");
             }
         }
         if (args.length == 0) {

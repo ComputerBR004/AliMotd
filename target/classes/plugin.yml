@@ -1,5 +1,5 @@
 name: AliMOTD
-version: '1.8.0'
+version: '1.9.0'
 main: br.computer.alimotd.Alimotd
 api-version: 1.16
 softdepend: [ ProtocolLib ]
@@ -9,4 +9,6 @@ commands:
   manutencao:
     aliases:
       - manu
+      - maintenance
       - whitelist
+      - mainte

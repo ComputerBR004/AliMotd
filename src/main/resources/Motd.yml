@@ -4,10 +4,9 @@
 #██╔══██║██║░░░░░██║██║╚██╔╝██║██║░░██║░░░██║░░░██║░░██║
 #██║░░██║███████╗██║██║░╚═╝░██║╚█████╔╝░░░██║░░░██████╔╝
 #╚═╝░░╚═╝╚══════╝╚═╝╚═╝░░░░░╚═╝░╚════╝░░░░╚═╝░░░╚═════╝░
-#Versão: 1.0        Author: Computer_BR(Alisson)
 
-#Site para criar mensagens com gradiente: https://rgb.birdflop.com/
-#Sites para hospedar os Server-Icon.png
+#Website to create messages with gradient: https://rgb.birdflop.com/
+#Websites to host Server-Icon.png
 #Imgur: https://imgur.com/
 #Dropbox: https://www.dropbox.com/
 #Google Drive: https://www.google.com/drive/
@@ -15,65 +14,65 @@
 #●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
 #† ❤ † MOTD † ❤ †
 #●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
-Motd: #Você pode usar todas essas Placeholders. {data_hora}, {nl}, {online} e {max_players} .Lembrando que {data_hora} irá pegar o horário da máquina que está o Servidor
-  server-icon-url: "" #Aqui você coloca o link para um Server-Icon.png exemplo: https://i.imgur.com/alpb546.png
-  server-icon-name: "Server-Icon.png" #Nome do Server-Icon, você precisa colocar na Pasta "Server-Icon", lembrando que precisa ter o mesmo nome na pasta e ser png
-  ativarmotdestatico: false
+Motd: #You can use all of these placeholders: {date_time}, {nl}, {online}, and {max_players}. Remember that {date_time} will retrieve the time of the machine that the Server is hosted on.
+  server-icon-url: "" #Here you can place the link to a Server-Icon.png, for example: https://i.imgur.com/alpb546.png
+  server-icon-name: "Server-Icon.png" #Name of the Server-Icon, you need to put it in the "Server-Icon" folder. Remember that it needs to have the same name in the folder and be in png format.
+  ativarmotdestatico: false #Enable or disable Static MOTD mode, it will not switch to the days of the week.
   motd_estatico:
-    - "&aServidor está aberto 1{nl}&aHoje é {data_hora}"
-    - "&aServidor está aberto 2{nl}&aHoje é {data_hora}"
-    - "&aServidor está aberto 3{nl}&aHoje é {data_hora}"
-  segunda-feira:
-    - "&aServidor está{nl}&aTotalmente aberto Segunda-Feira"
-    - "&aServidor está{nl}&aTotalmente aberto Segunda-Feira"
-  terca-feira:
-    - "&aServidor está{nl}&aTotalmente aberto Terça-Feira"
-    - "&aServidor está{nl}&aTotalmente aberto Terça-Feira"
-  quarta-feira:
-    - "&aServidor está{nl}&aTotalmente aberto Quarta-Feira"
-    - "&aServidor está{nl}&aTotalmente aberto Quarta-Feira"
-  quinta-feira:
-    - "&aServidor está{nl}&aTotalmente aberto Quinta-Feira"
-    - "&aServidor está{nl}&aTotalmente aberto Quinta-Feira"
-  sexta-feira:
-    - "&aServidor está{nl}&aTotalmente aberto Sexta-Feira"
-    - "&aServidor está{nl}&aTotalmente aberto Sexta-Feira"
-  sabado:
-    - "&aServidor está{nl}&aTotalmente aberto Sabado"
-    - "&aServidor está{nl}&aTotalmente aberto Sabado"
-  domingo:
-    - "&aServidor está{nl}&aTotalmente aberto Domingo"
-    - "&aServidor está{nl}&aTotalmente aberto Domingo"
+    - "&aServer is open 1!{nl}&aToday is {date_time}"
+    - "&aServer is open 2!{nl}&aToday is {date_time}"
+    - "&aServer is open 3!{nl}&aToday is {date_time}"
+  segunda-feira: #Monday
+    - "&aServer is{nl}&aFully open on Monday"
+    - "&aServer is{nl}&aFully open on Monday"
+  terca-feira: #Tuesday
+    - "&aServer is{nl}&aFully open on Tuesday"
+    - "&aServer is{nl}&aFully open on Tuesday"
+  quarta-feira: #Wednesday
+    - "&aServer is{nl}&aFully open on Wednesday"
+    - "&aServer is{nl}&aFully open on Wednesday"
+  quinta-feira: #Thursday
+    - "&aServer is{nl}&aFully open on Thursday"
+    - "&aServer is{nl}&aFully open on Thursday"
+  sexta-feira: #Friday
+    - "&aServer is{nl}&aFully open on Friday"
+    - "&aServer is{nl}&aFully open on Friday"
+  sabado: #Saturday
+    - "&aServer is{nl}&aFully open on Saturday"
+    - "&aServer is{nl}&aFully open on Saturday"
+  domingo: #Sunday
+    - "&aServer is{nl}&aFully open on Sunday"
+    - "&aServer is{nl}&aFully open on Sunday"
 
 #●▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬●
-#† ❤ † MOTD MANUTENÇÂO † ❤ †
+#† ❤ † MOTD MAINTENANCE † ❤ †
 #●▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬●
-Motd_Manutencao: #Você pode usar todas essas Placeholders. {data_hora}, {nl}, {online} e {max_players}
-  server-icon-url: "" #Aqui você coloca o link para um Server-Icon.png exemplo: https://i.imgur.com/alpb546.png
-  server-icon-name: "maintenance-Icon.png" #Nome do Server-Icon, você precisa colocar na Pasta "Server-Icon", lembrando que precisa ter o mesmo nome na pasta e ser png
-  ativarmotdestatico: false
-  motd_estatico:
-    - "&cServidor está em manutenção 1{nl}&cHoje é {data_hora}"
-    - "&cServidor está em manutenção 2{nl}&cHoje é {data_hora}"
-    - "&cServidor está em manutenção 3{nl}&cHoje é {data_hora}"
-  segunda-feira:
-    - "&cServidor está em{nl}&cManutenção, hoje é Segunda-Feira"
-    - "&cServidor está em{nl}&cManutenção, hoje é Segunda-Feira"
-  terca-feira:
-    - "&cServidor está em{nl}&cManutenção, hoje é Terça-Feira"
-    - "&cServidor está em{nl}&cManutenção, hoje é Terça-Feira"
-  quarta-feira:
-    - "&cServidor está em{nl}&cManutenção, hoje é Quarta-Feira"
-    - "&cServidor está em{nl}&cManutenção, hoje é Quarta-Feira"
-  quinta-feira:
-    - "&cServidor está em{nl}&cManutenção, hoje é Quinta-Feira"
-    - "&cServidor está em{nl}&cManutenção, hoje é Quinta-Feira"
-  sexta-feira:
-    - "&cServidor está em{nl}&cManutenção, hoje é Sexta-Feira"
-    - "&cServidor está em{nl}&cManutenção, hoje é Sexta-Feira"
-  sabado:
-    - "&cServidor está em{nl}&cManutenção, hoje é Sabado"
-    - "&cServidor está em{nl}&cManutenção, hoje é Sabado"
-  domingo:
-    - "&cServidor está em{nl}&cManutenção, hoje é Domingo"
-    - "&cServidor está em{nl}&cManutenção, hoje é Domingo"
+Motd_Manutencao: #You can use all of these placeholders. {date_time}, {nl}, {online}, and {max_players}.
+  server-icon-url: "" #Here you can place the link to a Server-Icon.png, for example: https://i.imgur.com/alpb546.png
+  server-icon-name: "maintenance-Icon.png" #Name of the Server-Icon, you need to put it in the "Server-Icon" folder. Remember that it needs to have the same name in the folder and be in png format.
+  ativarmotdestatico: false #Enable or disable Static MOTD mode, it will not switch to the days of the week.
+  motd_estatico: 
+    - "&cServer is under maintenance 1{nl}&cToday is {date_time}"
+    - "&cServer is under maintenance 2{nl}&cToday is {date_time}"
+    - "&cServer is under maintenance 3{nl}&cToday is {date_time}"
+  segunda-feira: #Monday
+    - "&cServer is under{nl}&cMaintenance, today is Monday"
+    - "&cServer is under{nl}&cMaintenance, today is Monday"
+  terca-feira: #Tuesday
+    - "&cServer is under{nl}&cMaintenance, today is Tuesday"
+    - "&cServer is under{nl}&cMaintenance, today is Tuesday"
+  quarta-feira: #Wednesday
+    - "&cServer is under{nl}&cMaintenance, today is Wednesday"
+    - "&cServer is under{nl}&cMaintenance, today is Wednesday"
+  quinta-feira: #Thursday
+    - "&cServer is under{nl}&cMaintenance, today is Thursday"
+    - "&cServer is under{nl}&cMaintenance, today is Thursday"
+  sexta-feira: #Friday
+    - "&cServer is under{nl}&cMaintenance, today is Friday"
+    - "&cServer is under{nl}&cMaintenance, today is Friday"
+  sabado: #Saturday
+    - "&cServer is under{nl}&cMaintenance, today is Saturday"
+    - "&cServer is under{nl}&cMaintenance, today is Saturday"
+  domingo: #Sunday
+    - "&cServer is under{nl}&cMaintenance, today is Sunday"
+    - "&cServer is under{nl}&cMaintenance, today is Sunday"

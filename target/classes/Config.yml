@@ -4,62 +4,61 @@
 #██╔══██║██║░░░░░██║██║╚██╔╝██║██║░░██║░░░██║░░░██║░░██║
 #██║░░██║███████╗██║██║░╚═╝░██║╚█████╔╝░░░██║░░░██████╔╝
 #╚═╝░░╚═╝╚══════╝╚═╝╚═╝░░░░░╚═╝░╚════╝░░░░╚═╝░░░╚═════╝░
-#Versão: 1.0        Author: Computer_BR(Alisson)
+#Version: 1.8.1       Author: Computer_BR(Alisson)
 
 
 #●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
 #† ❤ † PING † ❤ †
 #●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
 PlayerListPing:
-  ligado: true #Habilitar ou desabilitar a exibição de jogadores ao passar o cursor do mouse sobre o Ping do servidor na lista de servidores.
+  ligado: true #Enable or disable display of players when hovering over the server's Ping in the server list.
   fakePlayers:
-    - "&aEntre já"
-    - "&aEstamos esperando por você"
-    - "&aTemos &5{online}&a/&4{max_players}"
+    - "&aJoin now"
+    - "&aWe're waiting for you"
+    - "&aWe have &5{online}&a/&4{max_players}"
 PlayerListPing_Manutencao:
-  ligado_Manutencao: true #Ligar ou desligar a visualização de jogadores dentro do servidor ao passar o cursor do mouse sobre o Ping do servidor na lista de servidores.
+  ligado_Manutencao: true #Enable or disable display of players when hovering over the server's Ping in the server list.
   fakePlayers_Manutencao:
-    - "&cServidor está em manutenção"
-    - "&cEspere até ele voltar"
-    - "&cBeijos"
+    - "&cServer is under maintenance"
+    - "&cPlease wait until it's back"
 
 #●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬●
 #† ❤ † CONFIGS † ❤ †
 #●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬●
 FakeAumento:
-  ativar: false #Ative ou desative o FakeAumento.
-  quantidade: 1 #Visual, coloque quantos slots irá aumentar quando o player entrar no servidor.
+  ativar: false #Enable or disable FakePlayerIncrease
+  quantidade: 1 #Visual, indicate how many slots will increase when a player joins the server.
 FakeOnline:
-  ativar: false #Ative ou desative o FakeOnline.
-  quantidade: 10  #Coloque quantos jogadores vc quer que apareça no PING, antes de entrar no servidor.
+  ativar: false #Enable or disable FakeOnline.
+  quantidade: 10  #Indicate how many players you want to appear in the PING before entering the server.
 FakeMaximoJogadores:
-  ativar: false #Ativar ou desativar o FakeMaximoJogadores.
-  quantidade: 100 #Visual, quantidade de jogadores que irá aparecer no PING.
+  ativar: false #Enable or disable FakeMaximoJogadores.
+  quantidade: 100 #Visual, number of players that will appear in the PING.
 FakeMaximoJogadoresManutencao:
-  ativar: true #Ativar ou desativar o FakeMaximoJogadoresManutencao.
-  quantidade: 1 #Visual, quantidade de jogadores que irá aparecer no PING quando o servidor estiver em manutenção.
+  ativar: true #Enable or disable FakeMaximoJogadoresManutencao.
+  quantidade: 1 #Visual, number of players that will appear in the PING when the server is undergoing maintenance.
 Whitelist:
-  removerplayerkick: true #A configuração para expulsar ou permitir que o jogador fique no servidor ao ser removido da lista de manutenção.
-  kickplayerativar: true #A configuração para expulsar ou permitir que o jogador permaneça no servidor durante a manutenção, dependendo de se ele estiver na lista de manutenção ou não.
+  removerplayerkick: true #The setting to kick or allow the player to remain on the server when they are removed from the maintenance list.
+  kickplayerativar: true #The setting to either kick or allow the player to remain on the server during maintenance, depending on whether they are on the maintenance list or not.
   naoremover:
     - "Computer_BR"
 #●▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬●
-#† ❤ † PERMISSÕES † ❤ †
+#† ❤ † PERMISSIONS † ❤ †
 #●▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬●
 Permissoes:
   alimotd: "Alimotd.motd"
-  perme_continuarnoservidor: "Alimotd.continuarnoservidor" #Com essa permissão, quem não tem op e nem esteja na whitelist irá conseguir continuar no servidor quando a manutenção ser ativada
+  perme_continuarnoservidor: "Alimotd.continuarnoservidor" #With this permission, players who are neither op nor on the whitelist will be able to stay on the server when maintenance is activated.
 #●▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬●
 #† ❤ † Kick Manutenção † ❤ †
 #●▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬●
 KickManutencao:
-  desativar_manutencao: false #Ativar ou desativar quando a manutenção chegar na data específica indicada. "True" ele irá desativar a manutenção
-  ano: 2050
-  mes: 2
-  dia: 10
-  horas: 01
-  minutos: 37
-  kick_mensagem_entrada: #Neste local, você pode criar uma mensagem para exibir quando o jogador tentar acessar o servidor que está em manutenção. Crie linhas infinitas
-    - "&cDesculpe, o servidor está em manutenção"
-    - "&cRetornaremos em {horas} horas e {minutos} minutos e {segundos} segundos"
-    - "&cno dia {data}"
+  desativar_manutencao: false #Toggle on or off when maintenance reaches the specific date indicated. "True" will turn off maintenance.
+  year: 2050
+  month: 2
+  day: 10
+  hours: 01
+  minutes: 37
+  kick_mensagem_entrada: #In this location, you can create a message to display when the player tries to access the server that is undergoing maintenance. Create infinite lines.
+    - "&cSorry, the server is undergoing maintenance"
+    - "&cWe'll be back in {hours} hours, {minutes} minutes, and {seconds} seconds"
+    - "&con {date}"

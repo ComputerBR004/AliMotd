@@ -1,0 +1,53 @@
+#░█████╗░██╗░░░░░██╗███╗░░░███╗░█████╗░████████╗██████╗░
+#██╔══██╗██║░░░░░██║████╗░████║██╔══██╗╚══██╔══╝██╔══██╗
+#███████║██║░░░░░██║██╔████╔██║██║░░██║░░░██║░░░██║░░██║
+#██╔══██║██║░░░░░██║██║╚██╔╝██║██║░░██║░░░██║░░░██║░░██║
+#██║░░██║███████╗██║██║░╚═╝░██║╚█████╔╝░░░██║░░░██████╔╝
+#╚═╝░░╚═╝╚══════╝╚═╝╚═╝░░░░░╚═╝░╚════╝░░░░╚═╝░░░╚═════╝░
+#Versión: 1.0        Autor: Computer_BR(Alisson)
+
+#●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬●
+#† ❤ † MENSAJES † ❤ †
+#●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬●
+Versao_Errada: "&41.8.x - 1.18.2" #Mensaje de incompatibilidad que se mostrará cuando el reproductor utilice una versión no compatible con el servidor..
+Manutencao_Erro_Ao_Entrar: "&cEl servidor entró en mantenimiento{nl}&cVolveremos en un rato!" #Mensaje de mantenimiento que se mostrará al intentar iniciar sesión en el servidor durante un periodo de mantenimiento..
+Manutencao_Ativada: "&aMantenimiento activado correctamente!"
+Manutencao_Ja_Ativada: "&cYa se ha activado el mantenimiento!"
+Manutencao_Aviso_Ativado: "&aComo estás en la lista de mantenimiento, o estás con op, o estás con permiso, no te han expulsado!"
+Manutencao_Kick_Ativado: "&4Te expulsaron por no estar en la lista de mantenimiento{nl}&4Vuelva más tarde"
+Manutencao_Desativada: "&aMantenimiento desactivado correctamente!"
+Manutencao_Ja_Desativada: "&cYa se ha desactivado el mantenimiento!"
+Manutencao_Tempo: "&cPor favor, introduzca el tiempo que tardará el mantenimiento del servidor en segundos o minutos (Exemplo: 30s ou 2m)"
+Manutencao_Erro_Numero: "&cPor favor, introduzca un número válido."
+Manutencao_Contagem: "&aLa cuenta regresiva ha comenzado con éxito!"
+Nao_Pode_Remover: "&cNo puedes eliminar a §b{player} §cde la lista de mantenimiento."
+Ja_Foi_Removido: "&b{player}&c ya ha sido eliminado de la lista de mantenimiento."
+Foi_Expulso_Remover: "&cHa sido expulsado porque se le ha eliminado de la lista de mantenimiento{nl}&cVuelva más tarde"
+Remivido_Da_lista: "&b{player}&a ha sido eliminado de la lista de mantenimiento."
+Ja_Esta_Adicionado: "&b{player}&c ya está añadido a la lista de mantenimiento."
+Adicionado_Na_Lista: "&b{player}&a se ha añadido a la lista de mantenimiento."
+Lista_De_Manutencao: "&aLista de mantenimiento: &b"
+SemPerm: "&cNo tiene permiso para ejecutar este comando."
+Manutencao_remover: "&cUtilice /manutencao remover <nick>"
+Manutencao_add: "&cUtilice /manutencao add <nick>"
+Manutencao_1_Segundos: "&cO ¡El servidor entrará en mantenimiento en 1 segundo!" #Use {nl} para cambiar de línea.
+Manutencao_2_Segundos: "&cO ¡El servidor entrará en mantenimiento en 2 segundos!" #Use {nl} para cambiar de línea
+Manutencao_3_Segundos: "&cO ¡El servidor entrará en mantenimiento en 3 segundos!" #Use {nl} para cambiar de línea
+Manutencao_4_Segundos: "&cO ¡El servidor entrará en mantenimiento en 4 segundos!" #Use {nl} para cambiar de línea
+Manutencao_5_Segundos: "&cO ¡El servidor entrará en mantenimiento en 5 segundos!" #Use {nl} para cambiar de línea
+Manutencao_10_Segundos: "&cO ¡El servidor entrará en mantenimiento en 10 segundos!" #Use {nl} para cambiar de línea
+Manutencao_30_Segundos: "&cO ¡El servidor entrará en mantenimiento en 30 segundos!" #Use {nl} para cambiar de línea
+Manutencao_1_Minutos: "&cO ¡El servidor entrará en mantenimiento en 1 minuto!" #Use {nl} para cambiar de línea
+Manutencao_2_Minutos: "&cO ¡El servidor entrará en mantenimiento en 2 minutos!" #Use {nl} para cambiar de línea
+Manutencao_5_Minutos: "&cO ¡El servidor entrará en mantenimiento en 5 minutos!" #Use {nl} para cambiar de línea
+Manutencao_7_Minutos: "&cO ¡El servidor entrará en mantenimiento en 7 minutos!" #Use {nl} para cambiar de línea
+Manutencao_10_Minutos: "&cO ¡El servidor entrará en mantenimiento en 10 minutos!" #Use {nl} para cambiar de línea
+Manutencao_15_Minutos: "&cO ¡El servidor entrará en mantenimiento en 15 minutos!" #Use {nl} para cambiar de línea
+Manutencao_Comando_incorreto:
+  - "&cComando incorrecto, utilice:"
+  - "&c/{command} ativar"
+  - "&c/{command} desativar"
+  - "&c/{command} remover <nick>"
+  - "&c/{command} add <nick>"
+  - "&c/{command} lista"
+  - "&c/{command} reload"

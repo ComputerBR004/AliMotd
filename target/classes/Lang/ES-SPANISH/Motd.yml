@@ -1,0 +1,79 @@
+#░█████╗░██╗░░░░░██╗███╗░░░███╗░█████╗░████████╗██████╗░
+#██╔══██╗██║░░░░░██║████╗░████║██╔══██╗╚══██╔══╝██╔══██╗
+#███████║██║░░░░░██║██╔████╔██║██║░░██║░░░██║░░░██║░░██║
+#██╔══██║██║░░░░░██║██║╚██╔╝██║██║░░██║░░░██║░░░██║░░██║
+#██║░░██║███████╗██║██║░╚═╝░██║╚█████╔╝░░░██║░░░██████╔╝
+#╚═╝░░╚═╝╚══════╝╚═╝╚═╝░░░░░╚═╝░╚════╝░░░░╚═╝░░░╚═════╝░
+#Versión: 1.0        Autor: Computer_BR(Alisson)
+
+#Sitio para crear mensajes con degradado: https://rgb.birdflop.com/
+#Sitios para acoger el Server-Icon.png
+#Imgur: https://imgur.com/
+#Dropbox: https://www.dropbox.com/
+#Google Drive: https://www.google.com/drive/
+
+#●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
+#† ❤ † MOTD † ❤ †
+#●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●
+Motd: #Puede utilizar todos estos marcadores de posición. {date_time}, {nl}, {online} y {max_players} .Recordando que {data_hora} recogerá la hora de la máquina en la que está el servidor
+  server-icon-url: "" #Aquí se pone el enlace a un Server-Icon.png ejemplo: https://i.imgur.com/alpb546.png
+  server-icon-name: "Server-Icon.png" #Nombre del Server-Icon, debes ponerlo en la carpeta "Server-Icon", recordando que debe tener el mismo nombre en la carpeta y ser png
+  ativarmotdestatico: false
+  motd_estatico:
+    - "&aEl servidor está abierto 1{nl}&aHoy es {date_time}"
+    - "&aEl servidor está abierto 2{nl}&aHoy es {date_time}"
+    - "&aEl servidor está abierto 3{nl}&aHoy es {date_time}"
+  segunda-feira:
+    - "&aServidor está{nl}&aTotalmente abierto los Lunes"
+    - "&aServidor está{nl}&aTotalmente abierto los Lunes"
+  terca-feira:
+    - "&aServidor está{nl}&aTotalmente abierto los Martes"
+    - "&aServidor está{nl}&aTotalmente abierto los Martes"
+  quarta-feira:
+    - "&aEl servidor está{nl}&aTotalmente abierto los Miércoles"
+    - "&aEl servidor está{nl}&aTotalmente abierto los Miércoles"
+  quinta-feira:
+    - "&aServidor está{nl}&aTotalmente abierto los Jueves"
+    - "&aServidor está{nl}&aTotalmente abierto los Jueves"
+  sexta-feira:
+    - "&aServidor está{nl}&aTotalmente abierto los Viernes"
+    - "&aServidor está{nl}&aTotalmente abierto los Viernes"
+  sabado:
+    - "&aServidor está{nl}&aTotalmente aberto Sábado"
+    - "&aServidor está{nl}&aTotalmente aberto Sábado"
+  domingo:
+    - "&aServidor está{nl}&aTotalmente aberto Domingo"
+    - "&aServidor está{nl}&aTotalmente aberto Domingo"
+
+#●▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬●
+#† ❤ † MANTENIMIENTO MOTD † ❤ †
+#●▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬●
+Motd_Manutencao: #Puede utilizar todos estos marcadores de posición. {date_time}, {nl}, {online} y {max_players}
+  server-icon-url: "" #Aquí se pone el enlace a un Server-Icon.png ejemplo: https://i.imgur.com/alpb546.png
+  server-icon-name: "maintenance-Icon.png" #Nombre del icono de servidor que debe poner en la carpeta "Server-Icon", recordando que debe tener el mismo nombre en la carpeta y ser png
+  ativarmotdestatico: false
+  motd_estatico:
+    - "&cEl servidor está en mantenimiento 1{nl}&cHoy es {date_time}"
+    - "&cEl servidor está en mantenimiento 2{nl}&cHoy es {date_time}"
+    - "&cEl servidor está en mantenimiento 3{nl}&cHoy es {date_time}"
+  segunda-feira:
+    - "&cEl servidor está en{nl}&cMantenimiento, hoy es Lunes"
+    - "&cEl servidor está en{nl}&cMantenimiento, hoy es Lunes"
+  terca-feira:
+    - "&cEl servidor está en{nl}&cManutenção, hoy es Martes"
+    - "&cEl servidor está en{nl}&cManutenção, hoy es Martes"
+  quarta-feira:
+    - "&cEl servidor está en{nl}&cManutenção, hoy es Miércoles"
+    - "&cEl servidor está en{nl}&cManutenção, hoy es Miércoles"
+  quinta-feira:
+    - "&cEl servidor está en{nl}&cManutenção, hoy es Jueves"
+    - "&cEl servidor está en{nl}&cManutenção, hoy es Jueves"
+  sexta-feira:
+    - "&cEl servidor está en{nl}&cManutenção, hoy es Viernes"
+    - "&cEl servidor está en{nl}&cManutenção, hoy es Viernes"
+  sabado:
+    - "&cEl servidor está en{nl}&cManutenção, hoy es Sábado"
+    - "&cEl servidor está enm{nl}&cManutenção, hoy es Sábado"
+  domingo:
+    - "&cEl servidor está en{nl}&cManutenção, hoy es Domingo"
+    - "&cEl servidor está en{nl}&cManutenção, hoy es Domingo"

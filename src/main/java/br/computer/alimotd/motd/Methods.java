@@ -46,7 +46,7 @@ public class Methods {
         return hex(ChatColor.translateAlternateColorCodes('&',
                 string.replaceAll("\\{nl\\}", "\n")
                         .replaceAll("\\{max_players\\}", String.valueOf(maxplayers))
-                        .replaceAll("\\{data_hora\\}", new SimpleDateFormat("dd/MM/yyyy HH:mm").format(Calendar.getInstance().getTime()))
+                        .replaceAll("\\{date_time\\}", new SimpleDateFormat("dd/MM/yyyy HH:mm").format(Calendar.getInstance().getTime()))
                         .replaceAll("\\{online\\}", String.valueOf(online))
         ));
     }

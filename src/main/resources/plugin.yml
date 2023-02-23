@@ -9,4 +9,6 @@ commands:
   manutencao:
     aliases:
       - manu
+      - maintenance
       - whitelist
+      - mainte

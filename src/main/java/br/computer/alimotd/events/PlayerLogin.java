@@ -20,11 +20,11 @@ public class PlayerLogin implements Listener {
     public void login(PlayerLoginEvent e) {
         if (e.getResult() == PlayerLoginEvent.Result.KICK_WHITELIST) {
             Calendar maintenanceDate = Calendar.getInstance();
-            int ano = Alimotd.config.getConfig().getInt("KickManutencao.ano");
-            int mes = Alimotd.config.getConfig().getInt("KickManutencao.mes");
-            int dia = Alimotd.config.getConfig().getInt("KickManutencao.dia");
-            int horas = Alimotd.config.getConfig().getInt("KickManutencao.horas");
-            int minutos = Alimotd.config.getConfig().getInt("KickManutencao.minutos");
+            int ano = Alimotd.config.getConfig().getInt("KickManutencao.year");
+            int mes = Alimotd.config.getConfig().getInt("KickManutencao.month");
+            int dia = Alimotd.config.getConfig().getInt("KickManutencao.day");
+            int horas = Alimotd.config.getConfig().getInt("KickManutencao.hours");
+            int minutos = Alimotd.config.getConfig().getInt("KickManutencao.minutes");
             int segundos = 0;
             switch (mes) {
                 case 1:
@@ -93,10 +93,10 @@ public class PlayerLogin implements Listener {
             List<String> messages = Alimotd.config.getConfig().getStringList("KickManutencao.kick_mensagem_entrada");
             StringBuilder messageBuilder = new StringBuilder();
             for (String message : messages) {
-                message = message.replace("{horas}", String.valueOf(hours))
-                        .replace("{minutos}", String.valueOf(minutes))
-                        .replace("{segundos}", String.valueOf(seconds))
-                        .replace("{data}", dateFormat.format(maintenanceDate.getTime()))
+                message = message.replace("{hours}", String.valueOf(hours))
+                        .replace("{minutes}", String.valueOf(minutes))
+                        .replace("{seconds}", String.valueOf(seconds))
+                        .replace("{date}", dateFormat.format(maintenanceDate.getTime()))
                         .replace("&", "§");
                 messageBuilder.append(message).append("\n");
             }

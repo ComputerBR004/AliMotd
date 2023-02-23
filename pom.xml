@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.computer</groupId>
     <artifactId>AliMOTD</artifactId>
-    <version>1.8.0</version>
+    <version>1.9.0</version>
     <packaging>jar</packaging>
     <name>AliMOTD</name>
     <description>AliMotd, plugin de Motd com Sistema de manutenção</description>

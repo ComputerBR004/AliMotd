@@ -24,13 +24,13 @@ public class PlayerJoin implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         if (player.isOp()) {
-            TextComponent mensagem = new TextComponent("Uma nova versão do ALIMOTD está disponível: ");
+            TextComponent mensagem = new TextComponent("A new version of ALIMOTD is available: ");
             mensagem.setColor(ChatColor.RED.asBungee());
 
-            TextComponent link = new TextComponent("Clique aqui");
+            TextComponent link = new TextComponent("Click here");
             link.setColor(ChatColor.AQUA.asBungee());
             link.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.spigotmc.org/resources/alimotd-1-8-1-19.107981/"));
-            link.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("Clique para ir para o link").create()));
+            link.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("Click to go to link").create()));
             mensagem.addExtra(link);
 
             player.spigot().sendMessage(mensagem);

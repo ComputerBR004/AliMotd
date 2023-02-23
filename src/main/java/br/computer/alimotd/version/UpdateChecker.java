@@ -26,7 +26,7 @@ public class UpdateChecker {
                     consumer.accept(scanner.next());
                 }
             } catch (IOException exception) {
-                plugin.getLogger().info("§cNão foi possível verificar atualizações: " + exception.getMessage());
+                plugin.getLogger().info("§cUnable to check for updates: " + exception.getMessage());
             }
         });
     }
